@@ -67,24 +67,12 @@ apply_osx_system_defaults() {
     # Spaces span all displays
     defaults write com.apple.spaces "spans-displays" -bool false
 
-    # Do not rearrange spaces automatically
-    defaults write com.apple.dock "mru-spaces" -bool false
-
     # Set Dock autohide
     defaults write com.apple.dock autohide -bool true
     defaults write com.apple.dock largesize -float 128
     defaults write com.apple.dock "minimize-to-application" -bool true
     defaults write com.apple.dock tilesize -float 32
 
-    # Rectangle
-    defaults write com.knollsoft.Rectangle curtainChangeSize -int 2
-    defaults write com.knollsoft.Rectangle almostMaximizeHeight -float 1
-    defaults write com.knollsoft.Rectangle almostMaximizeWidth -float 0.85
-
-    # Rectangle custom window size with Shift + Alt + Ctrl + Cmd + N
-    defaults write com.knollsoft.Rectangle specified -dict-add keyCode -float 45 modifierFlags -float 1966379
-    defaults write com.knollsoft.Rectangle specifiedHeight -float 1055
-    defaults write com.knollsoft.Rectangle specifiedWidth -float 1876
 }
 
 if [ "$(basename "$0")" = "$(basename "${BASH_SOURCE[0]}")" ]; then
