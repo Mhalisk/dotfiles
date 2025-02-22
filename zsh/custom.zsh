@@ -2,17 +2,10 @@
 eval "$(/opt/homebrew/bin/brew shellenv)"
 export HOMEBREW_NO_AUTO_UPDATE=1
 
-# Pipenv
-export PIPENV_VENV_IN_PROJECT=1
-
 # Pyenv
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)" # Initialize pyenv when a new shell spawns
-
-# Poetry
-export PATH="$HOME/.local/bin:$PATH"
-# alias poetry_shell='. "$(dirname $(poetry run which python))/activate"'
 
 # Starship
 export STARSHIP_CONFIG="$HOME/.config/starship/starship.toml"
@@ -24,11 +17,14 @@ zstyle ':completion:*:*:git:*' script $HOME/.config/zsh/git-completion.bash
 fpath=($HOME/.config/zsh $fpath)
 autoload -Uz compinit && compinit
 
-# Redshift
-export ODBCINI="$HOME/.odbc.ini"
-export ODBCSYSINI="/opt/amazon/redshift/Setup"
-export AMAZONREDSHIFTODBCINI="/opt/amazon/redshift/lib/amazon.redshiftodbc.ini"
-export DYLD_LIBRARY_PATH="$DYLD_LIBRARY_PATH:/usr/local/lib"
+# Google Cloud SDK
+if [ -f '/Users/mhalisk/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/mhalisk/google-cloud-sdk/path.zsh.inc'; fi
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/mhalisk/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/mhalisk/google-cloud-sdk/completion.zsh.inc'; fi
+source /Users/mhalisk/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+#Postgres
+export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/14/bin
 
 # fzf
 [ -f "$HOME/.fzf.zsh" ] && source "$HOME/.fzf.zsh"
@@ -76,10 +72,12 @@ eval "$(zoxide init zsh)"
 
 # Activate syntax highlighting
 source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
 # Disable underline
 (( ${+ZSH_HIGHLIGHT_STYLES} )) || typeset -A ZSH_HIGHLIGHT_STYLES
 ZSH_HIGHLIGHT_STYLES[path]=none
 ZSH_HIGHLIGHT_STYLES[path_prefix]=none
+
 # Change colors
 # export ZSH_HIGHLIGHT_STYLES[suffix-alias]=fg=blue
 # export ZSH_HIGHLIGHT_STYLES[precommand]=fg=blue
