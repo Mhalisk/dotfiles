@@ -6,7 +6,7 @@
 . scripts/osx-defaults.sh
 . scripts/symlinks.sh
 
-info "Dotfiles intallation initialized..."
+info "Dotfiles installation initialized..."
 read -p "Install apps? [y/n] " install_apps
 read -p "Overwrite existing dotfiles? [y/n] " overwrite_dotfiles
 
