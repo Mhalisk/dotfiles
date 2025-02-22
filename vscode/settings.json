@@ -1,240 +1,227 @@
 {
-  //
-  // === Appearance ===
-  //
-  "workbench.colorTheme": "Default Dark Modern",
-  "workbench.iconTheme": "vscode-icons",
-  "vsicons.presets.foldersAllDefaultIcon": true,
-  "vsicons.presets.hideExplorerArrows": true,
-  "vsicons.dontShowNewVersionMessage": true,
-  "workbench.colorCustomizations": {
-    "editorCursor.foreground": "#ffffffbc",
-    "terminalCursor.foreground": "#ffffffbc"
+  // ================================ LAUNCH CONFIGURATION ======================================
+  "launch": {
+    "configurations": [],
+    "compounds": []
   },
-  "editor.fontSize": 12,
-  // "editor.fontFamily": "Fira Code,Menlo for Powerline",
-  "editor.fontFamily": "Hack Nerd Font",
-  "workbench.statusBar.visible": true,
-  "breadcrumbs.enabled": false,
-  "editor.lineNumbers": "relative",
-  "editor.minimap.enabled": false,
-  "window.commandCenter": false,
-  "workbench.layoutControl.enabled": false,
-  "update.showReleaseNotes": false,
-  "window.zoomLevel": 1.0,
-  "editor.folding": false,
-  "zenMode.hideLineNumbers": false,
-  "editor.rulers": [79],
-  //
-  // === Terminal ===
-  //
-  "terminal.external.osxExec": "wezterm.app",
-  "terminal.integrated.shell.osx": "/bin/zsh",
-  "terminal.integrated.fontFamily": "Hack Nerd Font",
-  "terminal.integrated.cursorStyle": "line",
-  //
-  // === Editor Behavior ===
-  //
-  "editor.stickyScroll.enabled": true,
-  "explorer.confirmDelete": false,
-  "explorer.confirmDragAndDrop": false,
-  "editor.renderWhitespace": "none",
-  "editor.linkedEditing": true,
-  "editor.inlineSuggest.enabled": true,
-  "editor.formatOnSave": true,
-  "editor.suggest.insertMode": "replace",
-  "workbench.editor.enablePreview": false,
-  // "editor.autoClosingBrackets": "never",
-  // "editor.autoClosingQuotes": "never",
-  //
-  // === Formatters and Linters ===
-  //
-  // Python
-  "[python]": {
-    "editor.defaultFormatter": "ms-python.black-formatter",
-    "editor.formatOnSave": true,
-    "editor.codeActionsOnSave": {
-      "source.organizeImports": "explicit"
-    },
-    "editor.formatOnType": true
+
+  // ================================ LANGUAGES CONFIGURATION ===================================
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "isort.args": ["--profile", "black"],
-  "flake8.args": ["--max-line-length=88", "--extend-ignore=E203,E501,E731"],
-  // Javascript
-  "javascript.updateImportsOnFileMove.enabled": "always",
-  // Typescript
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
   "[typescriptreact]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  // SQL
-  "[sql]": {
-    "editor.defaultFormatter": "mtxr.sqltools"
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  //
-  // === Extensions Settings ===
-  //
-  // Jupyter
-  "jupyter.askForKernelRestart": false,
-  "notebook.lineNumbers": "on",
-  // JSON
-  "JSON-zain.json.autorefresh": true,
-  // Gitlens
-  "gitlens.hovers.currentLine.over": "line",
-  // SQL Tools
-  "sqltools.connections": [],
-  "sqltools.highlightQuery": false,
-  "sqltools.results.limit": 500,
-  //
-  // === Vim Config ===
-  //
-  "vim.leader": "<Space>",
-  "vim.hlsearch": true,
-  "vim.easymotion": true,
-  "vim.incsearch": true,
-  "vim.useCtrlKeys": true,
-  "vim.useSystemClipboard": true,
-  "vim.highlightedyank.enable": true,
-  "vim.normalModeKeyBindingsNonRecursive": [
-    // Switch between buffers using Tab
-    {
-      "before": ["<Tab>"],
-      "commands": [":bnext"]
+  "[ruby]": {
+    "editor.defaultFormatter": "rubocop.vscode-rubocop"
+  },
+
+  // ================================ EDITOR SETTINGS ===========================================
+  "editor.formatOnSave": true,
+  "editor.fontLigatures": true,
+  "editor.find.addExtraSpaceOnTop": false,
+  "editor.smoothScrolling": true,
+  "editor.cursorSmoothCaretAnimation": "on",
+  "editor.insertSpaces": false,
+  "editor.suggestSelection": "first",
+  "editor.inlineSuggest.enabled": true,
+  "editor.autoClosingQuotes": "always",
+  "editor.wordWrap": "on",
+  "editor.accessibilitySupport": "off",
+  "editor.fontFamily": "FiraCode Nerd Font",
+  "editor.minimap.enabled": false,
+  "editor.inlayHints.fontFamily": "FiraCode Nerd Font",
+  "editor.codeLensFontFamily": "FiraCode Nerd Font",
+
+  // ================================ WORKBENCH SETTINGS ========================================
+  "workbench.startupEditor": "none",
+  "workbench.editor.labelFormat": "short",
+  "workbench.list.smoothScrolling": true,
+  "workbench.sideBar.location": "right",
+  "workbench.localHistory.enabled": false,
+  "workbench.colorTheme": "Default Light Modern",
+  "workbench.editor.showTabs": "single",
+  "workbench.layoutControl.enabled": false,
+  "workbench.tips.enabled": false,
+  "workbench.colorCustomizations": {
+    "[Default Dark Modern]": {
+      "statusBar.debuggingBackground": "#333333"
     },
-    {
-      "before": ["<S-Tab>"],
-      "commands": [":bprev"]
-    },
-    // Create splits
-    {
-      "before": ["leader", "v"],
-      "commands": [":vsplit"]
-    },
-    {
-      "before": ["leader", "h"],
-      "commands": [":split"]
-    },
-    // Navigate panes using CTRL+hjkl
-    {
-      "before": ["<C-h>"],
-      "commands": ["workbench.action.navigateLeft"]
-    },
-    {
-      "before": ["<C-j>"],
-      "commands": ["workbench.action.navigateDown"]
-    },
-    {
-      "before": ["<C-k>"],
-      "commands": ["workbench.action.navigateUp"]
-    },
-    {
-      "before": ["<C-l>"],
-      "commands": ["workbench.action.navigateRight"]
-    },
-    // Navigate the Explorer
-    {
-      "before": ["leader", "E"],
-      "commands": ["workbench.explorer.fileView.focus"]
-    },
-    {
-      "before": ["leader", "e"],
-      "commands": ["workbench.action.toggleSidebarVisibility"]
-    },
-    // Terminal
-    {
-      "before": ["leader", "t"],
-      "commands": ["workbench.action.togglePanel"]
-    },
-    // Closing and saving buffers
-    {
-      "before": ["leader", "s"],
-      "commands": [":w!"]
-    },
-    {
-      "before": ["leader", "q"],
-      "commands": [":q!"]
-    },
-    {
-      "before": ["leader", "x"],
-      "commands": [":x!"]
-    },
-    // Jump to markers
-    {
-      "before": ["[", "d"],
-      "commands": ["editor.action.marker.prev"]
-    },
-    {
-      "before": ["]", "d"],
-      "commands": ["editor.action.marker.next"]
-    },
-    // Code actions
-    {
-      "before": ["leader", "c", "a"],
-      "commands": ["editor.action.quickFix"]
-    },
-    // Search files
-    {
-      "before": ["leader", "s", "f"],
-      "commands": ["workbench.action.quickOpen"]
-    },
-    // Command prompt
-    {
-      "before": ["leader", "p"],
-      "commands": ["workbench.action.showCommands"]
-    },
-    // Show definition
-    {
-      "before": ["g", "d"],
-      "commands": ["editor.action.showDefinitionPreviewHover"]
-    },
-    // Toggle activity bar
-    {
-      "before": ["leader", "u", "a"],
-      "commands": ["workbench.action.toggleActivityBarVisibility"]
-    },
-    // Move panes
-    {
-      "before": ["leader", "w", "l"],
-      "commands": ["workbench.action.moveActiveEditorGroupRight"]
-    },
-    {
-      "before": ["leader", "w", "h"],
-      "commands": ["workbench.action.moveActiveEditorGroupLeft"]
-    },
-    {
-      "before": ["leader", "w", "j"],
-      "commands": ["workbench.action.moveActiveEditorGroupDown"]
-    },
-    {
-      "before": ["leader", "w", "k"],
-      "commands": ["workbench.action.moveActiveEditorGroupUp"]
-    },
-    // Resize panes
-    {
-      "before": ["up"],
-      "commands": ["workbench.action.increaseViewSize"]
-    },
-    {
-      "before": ["down"],
-      "commands": ["workbench.action.decreaseViewSize"]
+    "[Default Light Modern]": {
+      "statusBar.debuggingBackground": "#C2C2C2"
     }
-  ],
-  "vim.visualModeKeyBindings": [
-    // Allow indenting from visual mode
-    {
-      "before": ["<"],
-      "commands": ["editor.action.outdentLines"]
-    },
-    {
-      "before": [">"],
-      "commands": ["editor.action.indentLines"]
+  },
+  "workbench.activityBar.location": "hidden",
+
+  // ================================ GIT SETTINGS ==============================================
+  "git.confirmSync": false,
+  "git.autofetch": true,
+  "git.inputValidationLength": 280,
+  "git.inputValidationSubjectLength": 280,
+  "gitlens.advanced.messages": {
+    "suppressGitMissingWarning": true
+  },
+  "gitlens.currentLine.enabled": false,
+  "gitlens.fileAnnotations.command": "blame",
+  "gitlens.views.commitDetails.files.layout": "list",
+  "gitlens.views.searchAndCompare.files.layout": "list",
+
+  // ================================ EXPLORER SETTINGS =========================================
+  "explorer.confirmDelete": false,
+  "explorer.confirmDragAndDrop": false,
+  "explorer.compactFolders": false,
+
+  // ================================ TERMINAL SETTINGS =========================================
+  "terminal.integrated.drawBoldTextInBrightColors": false,
+  "terminal.integrated.scrollback": 50000,
+  "terminal.integrated.gpuAcceleration": "on",
+  "terminal.integrated.tabs.location": "left",
+  "terminal.integrated.smoothScrolling": true,
+  "terminal.integrated.defaultProfile.windows": "Ubuntu (WSL)",
+  "terminal.integrated.defaultProfile.osx": "zsh",
+  "terminal.integrated.persistentSessionReviveProcess": "never",
+  "terminal.integrated.profiles.osx": {
+    "zsh": {
+      "path": "zsh",
+      "args": ["-l"]
     }
-  ],
-  //
-  // === Other ===
-  //
-  "redhat.telemetry.enabled": false,
+  },
+  "terminal.integrated.fontFamily": "FiraCode Nerd Font",
+  "terminal.integrated.tabs.enabled": false,
+  "terminal.integrated.fontLigatures.enabled": true,
+
+  // ================================ DOCKER SETTINGS ===========================================
+  "docker.containers.description": ["ContainerName", "Status"],
+  "docker.containers.label": "ContainerName",
+
+  // ================================ JSON SETTINGS =============================================
+  "json.maxItemsComputed": 10000,
+
+  // ================================ SECURITY SETTINGS =========================================
   "security.workspace.trust.untrustedFiles": "open",
-  "telemetry.telemetryLevel": "off",
-  "aws.telemetry": false,
-  "makefile.configureOnOpen": false
+
+  // ================================ SETTINGS SYNC =============================================
+  "settingsSync.ignoredSettings": [
+    "-python.defaultInterpreterPath",
+    "workbench.colorTheme"
+  ],
+
+  // ================================ TASK SETTINGS =============================================
+  "task.problemMatchers.neverPrompt": {
+    "npm": true
+  },
+
+  // ================================ TYPESCRIPT & JAVASCRIPT SETTINGS ============================
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "typescript.preferences.quoteStyle": "single",
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "js/ts.implicitProjectConfig.strictNullChecks": false,
+
+  // ================================ GITHUB COPILOT SETTINGS ====================================
+  "github.copilot.enable": {
+    "*": true,
+    "plaintext": true,
+    "markdown": true,
+    "scminput": false
+  },
+  "github.copilot.editor.enableAutoCompletions": true,
+
+  // ================================ WINDOW SETTINGS ===========================================
+  "window.autoDetectColorScheme": true,
+  "window.dialogStyle": "custom",
+  "window.commandCenter": false,
+  "window.density.editorTabHeight": "compact",
+  "window.nativeTabs": true,
+  "window.customTitleBarVisibility": "never",
+
+  // ================================ SOLARGRAPH SETTINGS =======================================
+  "solargraph.autoformat": true,
+  "solargraph.formatting": true,
+
+  // ================================ DIFF EDITOR SETTINGS ======================================
+  "diffEditor.renderSideBySide": true,
+  "diffEditor.hideUnchangedRegions.enabled": true,
+
+  // ================================ BETTER TYPESCRIPT ERRORS SETTINGS =========================
+  "betterTypeScriptErrors.prettify": true,
+
+  // ================================ CSPELL SETTINGS ===========================================
+  "cSpell.userWords": [
+    "accum",
+    "Alessandro",
+    "artifactregistry",
+    "autofetch",
+    "Bottega",
+    "devs",
+    "dirtydiff",
+    "esbenp",
+    "Fira",
+    "Fragnani",
+    "HALISKY",
+    "Hellsing",
+    "HELSING",
+    "Meslo",
+    "mhalisk",
+    "Multiselector",
+    "PAPI",
+    "publickey",
+    "rubocop",
+    "ruleset",
+    "Rulesets",
+    "Samm",
+    "scminput",
+    "scrollback",
+    "selectandstart",
+    "solargraph",
+    "subarrays",
+    "validtoken"
+  ],
+  "cSpell.enableFiletypes": ["ruby"],
+
+  // ================================ VIM EXTENSION SETTINGS ====================================
+  // Fix deletions copying to clipboard; only yank, cut to clipboard.
+  "vim.useSystemClipboard": false,
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": ["d"],
+      "after": ["\"", "_", "d"]
+      // "d" => delete to blackhole
+    },
+    {
+      "before": ["c"],
+      "after": ["\"", "_", "c"]
+      // "c" => change to blackhole
+    }
+  ],
+  "vim.visualModeKeyBindingsNonRecursive": [
+    {
+      "before": ["d"],
+      "after": ["\"", "_", "d"]
+      // "d" => delete to blackhole
+    },
+    {
+      "before": ["c"],
+      "after": ["\"", "_", "c"]
+      // "c" => change to blackhole
+    }
+  ],
+
+  // ================================ DEBUG SETTINGS ===============================
+  "debug.openDebug": "neverOpen",
+  "debug.toolBarLocation": "hidden",
+  // ================================ REST CLIENT SETTINGS ===============================
+  "rest-client.fontFamily": "FiraCode Nerd Font",
+  "rest-client.previewResponseInUntitledDocument": true
 }

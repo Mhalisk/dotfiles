@@ -1,187 +1,725 @@
 [
-  // === Explorer ===
-  //
-  // Exit explorer with CTRL+l
+  // ====================================================================================================
+  // ================================== REMOVE ANNOYING SETTINGS ========================================
+  // ====================================================================================================
   {
-    "key": "ctrl+l",
-    "command": "workbench.action.navigateRight",
-    "when": "explorerViewletFocus"
+    "key": "space d r",
+    "command": "extension.js-debug.npmScript",
+    "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus) && !terminalFocus"
+    // "Space d r" chord to run npm script
   },
   {
-    "key": "ctrl+l",
-    "command": "workbench.action.focusActiveEditorGroup",
-    "when": "sideBarFocus",
+    "key": "shift+cmd+c",
+    "command": "-workbench.action.terminal.openNativeConsole",
+    "when": "!terminalFocus"
+    // Removes default open native console
   },
-  // Toggle and focus explorer
+  // ====================================================================================================
+  // ===================================== USER INTERFACE - UI ==========================================
+  // =============================================================================================3======
   {
-    "key": "shift+ctrl+e",
-    "command": "-workbench.view.explorer"
+    "key": "cmd+m",
+    "command": "workbench.action.toggleMaximizedPanel",
+    "when": "panelFocus"
+    // Toggles maximized panel
   },
   {
-    "command": "workbench.action.toggleSidebarVisibility",
-    "key": "ctrl+e"
+    "key": "shift+cmd+;",
+    "command": "workbench.action.terminal.resizePaneDown",
+    "when": "panelFocus"
+    // Resizes pane down while panel is focused
   },
   {
-    "command": "workbench.files.action.focusFilesExplorer",
-    "key": "ctrl+shift+e",
-    "when": "editorTextFocus"
+    "key": "shift+cmd+'",
+    "command": "workbench.action.terminal.resizePaneUp",
+    "when": "panelFocus"
+    // Resizes pane up while panel is focused
   },
-  // Rename files
+  // ====================================================================================================
+  // ===================================== CODE NAVIGATION ==============================================
+  // ====================================================================================================
+  {
+    "key": "cmd+]",
+    "command": "workbench.action.navigateForward"
+    // Navigates forward
+  },
+  {
+    "key": "cmd+o",
+    "command": "workbench.action.navigateForward"
+    // Navigates forward
+  },
+  {
+    "key": "ctrl+shift+-",
+    "command": "-workbench.action.navigateForward"
+    // Removes another forward nav binding
+  },
+  {
+    "key": "cmd+[",
+    "command": "workbench.action.navigateBack"
+    // Navigates back
+  },
+  {
+    "key": "cmd+i",
+    "command": "workbench.action.navigateBack"
+    // Navigates back
+  },
+  {
+    "key": "ctrl+-",
+    "command": "-workbench.action.navigateBack"
+    // Removes another back nav binding
+  },
+  {
+    "key": "cmd+enter",
+    "command": "editor.action.revealDefinition"
+    // Reveal definition
+  },
+  // ====================================================================================================
+  // =================================== WINDOW, TAB MANAGEMENT & NAVIGATION ============================
+  // ====================================================================================================
+  {
+    "key": "ctrl-h",
+    "command": "workbench.action.navigateLeft"
+    // Focuses the left editor group
+  },
+  {
+    "key": "ctrl-l",
+    "command": "workbench.action.navigateRight"
+    // Focuses the right editor group
+  },
+  {
+    "key": "ctrl-k",
+    "command": "workbench.action.navigateUp"
+    // Focuses the up editor group
+  },
+  {
+    "key": "ctrl-j",
+    "command": "workbench.action.navigateDown"
+    // Focuses the down editor group
+  },
+  {
+    "key": "ctrl+1",
+    "command": "workbench.action.focusFirstEditorGroup"
+    // Focuses the first editor group
+  },
+  {
+    "key": "ctrl+shift+]",
+    "command": "workbench.action.focusNextGroup"
+    // Focuses the next editor group
+  },
+  {
+    "key": "ctrl+shift+[",
+    "command": "workbench.action.focusPreviousGroup"
+    // Focuses the previous editor group
+  },
+  {
+    "key": "ctrl+2",
+    "command": "workbench.action.focusSecondEditorGroup"
+    // Focuses the second editor group
+  },
+  {
+    "key": "ctrl+3",
+    "command": "workbench.action.focusThirdEditorGroup"
+    // Focuses the third editor group
+  },
+  {
+    "key": "ctrl+4",
+    "command": "workbench.action.focusFourthEditorGroup"
+    // Focuses the fourth editor group
+  },
+  {
+    "key": "ctrl+5",
+    "command": "workbench.action.focusFifthEditorGroup"
+    // Focuses the fifth editor group
+  },
+  {
+    "key": "ctrl+6",
+    "command": "workbench.action.focusSixthEditorGroup"
+    // Focuses the sixth editor group
+  },
+  {
+    "key": "ctrl+7",
+    "command": "workbench.action.focusSeventhEditorGroup"
+    // Focuses the seventh editor group
+  },
+  {
+    "key": "ctrl+8",
+    "command": "workbench.action.focusEighthEditorGroup"
+    // Focuses the eighth editor group
+  },
+  {
+    "key": "cmd+1",
+    "command": "workbench.action.openEditorAtIndex1"
+    // Opens the editor at index 1
+  },
+  {
+    "key": "cmd+2",
+    "command": "workbench.action.openEditorAtIndex2"
+    // Opens the editor at index 2
+  },
+  {
+    "key": "cmd+3",
+    "command": "workbench.action.openEditorAtIndex3"
+    // Opens the editor at index 3
+  },
+  {
+    "key": "cmd+4",
+    "command": "workbench.action.openEditorAtIndex4"
+    // Opens the editor at index 4
+  },
+  {
+    "key": "cmd+5",
+    "command": "workbench.action.openEditorAtIndex5"
+    // Opens the editor at index 5
+  },
+  {
+    "key": "cmd+6",
+    "command": "workbench.action.openEditorAtIndex6"
+    // Opens the editor at index 6
+  },
+  {
+    "key": "cmd+7",
+    "command": "workbench.action.openEditorAtIndex7"
+    // Opens the editor at index 7
+  },
+  {
+    "key": "cmd+8",
+    "command": "workbench.action.openEditorAtIndex8"
+    // Opens the editor at index 8
+  },
+  {
+    "key": "cmd+9",
+    "command": "workbench.action.openEditorAtIndex9"
+    // Opens the editor at index 9
+  },
+  // ====================================================================================================
+  // =========================================== TERMINAL ===============================================
+  // ====================================================================================================
+  {
+    "key": "shift+cmd+j j",
+    "command": "workbench.action.terminal.toggleTerminal"
+    // "when": "terminal.active"
+    // Toggles the terminal
+  },
+  {
+    "key": "shift+cmd+j n",
+    "command": "workbench.action.terminal.new",
+    "when": "terminalProcessSupported || terminalWebExtensionContributedProfile"
+    // Creates a new terminal
+  },
+  {
+    "key": "shift+cmd+j p",
+    "command": "workbench.actions.view.problems",
+    "when": "workbench.panel.markers.view.active"
+    // Shows the Problems panel
+  },
+  {
+    "key": "shift+cmd+j o",
+    "command": "workbench.action.output.toggleOutput"
+    // Toggles the Output panel
+  },
+  {
+    "key": "shift+cmd+j d",
+    "command": "workbench.debug.action.toggleRepl",
+    "when": "workbench.panel.repl.view.active"
+    // Toggles the Debug Console
+  },
+  {
+    "key": "cmd+j",
+    "command": "workbench.action.terminal.toggleTerminal",
+    "when": "terminal.active"
+    // Toggles the terminal
+  },
+  {
+    "key": "ctrl+`",
+    "command": "-workbench.action.terminal.toggleTerminal",
+    "when": "terminal.active"
+    // Removes default terminal toggle
+  },
+  {
+    "key": "shift+cmd+backspace",
+    "command": "workbench.action.terminal.kill",
+    "when": "terminalFocus"
+    // Kills the terminal
+  },
+  {
+    "key": "shift+cmd+j backspace",
+    "command": "workbench.action.terminal.kill",
+    "when": "terminalFocus"
+    // Kills the terminal
+  },
+  {
+    "key": "shift+cmd+l",
+    "command": "workbench.action.terminal.focusNext",
+    "when": "terminalFocus"
+    // Focuses the next terminal tab
+  },
+  {
+    "key": "shift+cmd+h",
+    "command": "-workbench.action.terminal.focusNext",
+    "when": "terminalFocus"
+    // Removes default next terminal focus
+  },
+  {
+    "key": "shift+cmd+m",
+    "command": "-workbench.actions.view.problems",
+    "when": "workbench.panel.markers.view.active"
+    // Removes default problems panel key
+  },
+  {
+    "key": "shift+cmd+u",
+    "command": "-workbench.action.output.toggleOutput",
+    "when": "workbench.panel.output.active"
+    // Removes default output toggle
+  },
+  {
+    "key": "shift+cmd+g",
+    "command": "workbench.scm.focus"
+    // Focuses the Source Control (SCM) panel
+  },
+  {
+    "key": "shift+cmd+m",
+    "command": "mongoDBConnectionExplorer.focus"
+    // Focuses MongoDB containers view
+  },
+  {
+    "key": "shift+cmd+b",
+    "command": "workbench.view.extension.bookmarks"
+    // Opens the Bookmarks view
+  },
+  {
+    "key": "alt+cmd+h",
+    "command": "bookmarks.jumpToPrevious"
+    // Jumps back to previous Bookmark
+  },
+  // ====================================================================================================
+  // ================================ FILE EXPLORER - CRUD SHORTCUTS  ===================================
+  // ====================================================================================================
   {
     "key": "r",
     "command": "renameFile",
-    "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+    "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+    // Renames the selected file in the Explorer
   },
   {
-    "key": "enter",
-    "command": "-renameFile",
-    "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
-  },
-  // Create new files and folders
-  {
-    "key": "a",
-    "command": "explorer.newFile",
-    "when": "filesExplorerFocus && !inputFocus"
-  },
-  {
-    "key": "shift+a",
-    "command": "explorer.newFolder",
-    "when": "filesExplorerFocus && !inputFocus"
-  },
-  // Copy, paste and cut files
-  {
-    "key": "y",
+    "key": "c",
     "command": "filesExplorer.copy",
-    "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !inputFocus"
-  },
-  {
-    "key": "x",
-    "command": "filesExplorer.cut",
-    "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !inputFocus"
+    "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+    // Copies the selected file in the Explorer
   },
   {
     "key": "p",
     "command": "filesExplorer.paste",
-    "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceReadonly && !inputFocus"
+    "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+    // Pastes a previously copied or cut file in the Explorer
   },
-  // Delete files
+  {
+    "key": "x",
+    "command": "filesExplorer.cut",
+    "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+    // Cuts (moves) the selected file in the Explorer
+  },
   {
     "key": "d",
     "command": "deleteFile",
-    "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceReadonly && !inputFocus"
+    "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+    // Deletes the selected file in the Explorer
   },
-  // Open files to side
   {
-    "key": "v",
+    "key": "a",
+    "command": "explorer.newFile",
+    "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+    // Creates a new file in the Explorer
+  },
+  {
+    "key": "s",
     "command": "explorer.openToSide",
-    "when": "explorerViewletFocus && explorerViewletVisible && !inputFocus"
-  },
-  //
-  // === Submenu navigation ===
-  //
-  {
-    "key": "ctrl+j",
-    "command": "selectNextSuggestion",
-    "when": "editorTextFocus && suggestWidgetMultipleSuggestions && suggestWidgetVisible"
+    "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+    // Opens the selected file in a split editor to the side
   },
   {
-    "key": "ctrl+k",
-    "command": "selectPrevSuggestion",
-    "when": "editorTextFocus && suggestWidgetMultipleSuggestions && suggestWidgetVisible"
-  },
-  {
-    "key": "ctrl+j",
-    "command": "workbench.action.quickOpenSelectNext",
-    "when": "inQuickOpen"
-  },
-  {
-    "key": "ctrl+k",
-    "command": "workbench.action.quickOpenSelectPrevious",
-    "when": "inQuickOpen"
-  },
-  {
-    "key": "tab",
-    "command": "selectNextSuggestion",
-    "when": "editorTextFocus && suggestWidgetMultipleSuggestions && suggestWidgetVisible"
-  },
-  {
-    "key": "shift+tab",
-    "command": "selectPrevSuggestion",
-    "when": "editorTextFocus && suggestWidgetMultipleSuggestions && suggestWidgetVisible"
-  },
-  {
-    "key": "tab",
-    "command": "workbench.action.quickOpenSelectNext",
-    "when": "inQuickOpen"
-  },
-  {
-    "key": "shift+tab",
-    "command": "workbench.action.quickOpenSelectPrevious",
-    "when": "inQuickOpen"
-  },
-  {
-    "key": "shift+tab",
-    "command": "-acceptAlternativeSelectedSuggestion",
-    "when": "suggestWidgetVisible && textInputFocus && textInputFocus"
+    "key": "shift-s",
+    "command": "runCommands",
+    "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus",
+    "args": {
+      "commands": [
+        "workbench.action.splitEditorDown",
+        "explorer.openAndPassFocus",
+        "workbench.action.closeOtherEditors"
+      ]
+    }
+    // Splits the editor downward, opens the selected file in the new split, and closes other editors
   },
   {
     "key": "enter",
-    "command": "list.select",
-    "when": "explorerViewletVisible && filesExplorerFocus"
+    "command": "explorer.openAndPassFocus",
+    "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceIsFolder && !inputFocus"
+    // Opens the selected file and passes focus to the editor
   },
   {
-    "key": "l",
-    "command": "list.select",
-    "when": "!inputFocus"
-  },
-  {
-    "key": "o",
+    "key": "enter",
     "command": "list.toggleExpand",
-    "when": "!inputFocus"
-  },
-  //
-  // === Terminal ===
-  //
-  {
-    "key": "ctrl+t",
-    "command": "workbench.action.togglePanel"
+    "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && explorerResourceIsFolder && !inputFocus"
+    // Toggles the expansion (collapse/expand) of a folder in the Explorer
   },
   {
-    "key": "ctrl+k",
-    "command": "workbench.action.focusActiveEditorGroup",
-    "when": "terminalFocus"
+    "key": "shift+alt+]",
+    "command": "workbench.action.showNextWindowTab"
+    // Shows next window tab
   },
   {
-    "key": "ctrl+n",
-    "command": "workbench.action.terminal.new",
-    "when": "terminalFocus"
+    "key": "shift+alt+[",
+    "command": "workbench.action.showPreviousWindowTab"
+    // Shows previous window tab
+  },
+  // ====================================================================================================
+  // ====================================================================================================
+  // ====================================================================================================
+  // =========================================== VIM EXTENSION ==========================================
+  // ====================================================================================================
+  // =============== Anything past this point does not work without the Vim extension ===================
+  // ================ You do not need to enable/disable anything, it will just work======================
+  // ====================================================================================================
+  // ================= https://marketplace.visualstudio.com/items?itemName=vscodevim.vim ================
+  // ====================================================================================================
+  // ====================================================================================================
+  // ====================================================================================================
+  {
+    "key": "space ,",
+    "command": "workbench.action.showAllEditors",
+    // "Space ," chord to show all open editors
+    "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus) && !terminalFocus"
+  },
+  // ====================================================================================================
+  // "SPACE E" — TOGGLE FILE EXPLORER OPEN/CLOSE
+  // ====================================================================================================
+  {
+    "key": "space e",
+    "command": "runCommands",
+    "args": {
+      "commands": [
+        "workbench.action.toggleSidebarVisibility", // Open the sidebar
+        "workbench.files.action.focusFilesExplorer" // Focus the file explorer
+      ]
+    },
+    // "Space e" chord to open File Explorer if sidebar is hidden
+    "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus) && !sideBarFocus && !terminalFocus"
   },
   {
-    "key": "ctrl+l",
-    "command": "workbench.action.terminal.focusNext",
-    "when": "terminalFocus"
+    "key": "space e",
+    "command": "runCommands",
+    "args": {
+      "commands": [
+        "workbench.action.toggleSidebarVisibility", // Close the sidebar
+        "workbench.action.focusActiveEditorGroup" // Return focus to the editor
+      ]
+    },
+    // "Space e" chord to close sidebar if it's focused
+    "when": "sideBarFocus && !inputFocus && !terminalFocus"
   },
   {
-    "key": "ctrl+h",
-    "command": "workbench.action.terminal.focusPrevious",
-    "when": "terminalFocus"
+    "key": "space e",
+    "when": "vim.mode == 'Normal' && editorTextFocus && foldersViewVisible && !terminalFocus",
+    "command": "workbench.action.toggleSidebarVisibility"
+    // "Space e" chord to toggle sidebar if Explorer is visible but editor is focused
+  },
+  // ====================================================================================================
+  // "SPACE G G" — TOGGLE SOURCE CONTROL OPEN/CLOSE
+  // ====================================================================================================
+  {
+    "key": "space g g",
+    "command": "runCommands",
+    "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus) && !sideBarFocus && !terminalFocus",
+    "args": {
+      "commands": [
+        "workbench.action.toggleSidebarVisibility", // Open the sidebar
+        "workbench.view.scm", // Switch to SCM panel
+        "workbench.scm.focus" // Focus inside SCM
+      ]
+    }
+    // "Space g g" chord to open Source Control
   },
   {
-    "key": "ctrl+m",
-    "command": "workbench.action.toggleMaximizedPanel",
-    "when": "terminalFocus"
-  },
-  //
-  // === Other ===
-  //
-  // Toggle comment selection
-  {
-    "key": "ctrl+/",
-    "command": "editor.action.commentLine",
-    "when": "editorTextFocus && !editorReadonly"
+    "key": "space g g",
+    "command": "runCommands",
+    "when": "vim.mode == 'Normal' && sideBarFocus && !inputFocus && !terminalFocus",
+    "args": {
+      "commands": [
+        "workbench.action.toggleSidebarVisibility", // Close the sidebar
+        "workbench.action.focusActiveEditorGroup" // Return focus to the editor
+      ]
+    }
+    // "Space g g" chord to close sidebar if SCM is focused
   },
   {
-    "key": "ctrl+z",
-    "command": "workbench.action.toggleZenMode"
+    "key": "space g g",
+    "command": "workbench.action.toggleSidebarVisibility",
+    // "Space g g" chord to close SCM if user clicked back into editor
+    "when": "vim.mode == 'Normal' && editorTextFocus && scmViewletVisible && !terminalFocus"
   },
+  // ====================================================================================================
+  // "SPACE B B" — TOGGLE BOOKMARKS VIEW (Alessandro Fragnani) with open/close logic
+  // ====================================================================================================
+  {
+    "key": "space b b",
+    "command": "runCommands",
+    "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus) && (!sideBarFocus || activeViewlet != 'workbench.view.extension.bookmarks') && !terminalFocus",
+    "args": {
+      "commands": [
+        "workbench.action.toggleSidebarVisibility", // Open or show the sidebar
+        "workbench.view.extension.bookmarks" // Switch to Bookmarks view
+      ]
+    }
+    // "Space b b" chord to open Bookmarks
+  },
+  {
+    "key": "space b b",
+    "command": "runCommands",
+    "when": "vim.mode == 'Normal' && sideBarFocus && activeViewlet == 'workbench.view.extension.bookmarks' && !inputFocus && !terminalFocus",
+    "args": {
+      "commands": [
+        "workbench.action.toggleSidebarVisibility" // Close the sidebar
+      ]
+    }
+    // "Space b b" chord to close Bookmarks if currently focused
+  },
+  {
+    "key": "space b b",
+    "command": "workbench.action.toggleSidebarVisibility",
+    "when": "vim.mode == 'Normal' && editorTextFocus && activeViewlet == 'workbench.view.extension.bookmarks' && !terminalFocus"
+    // "Space b b" chord to just toggle sidebar if Bookmarks is visible but user is in the editor
+  },
+  // ====================================================================================================
+  // "SPACE M M" — TOGGLE MONGO EXTENSION (MongoDB)
+  // ====================================================================================================
+  {
+    "key": "space m m",
+    "command": "runCommands",
+    // "Space m m" chord to open MongoDB if sidebar is hidden
+    // Only triggers in normal mode, with editor focus, no sidebar focus, and not in terminal
+    "when": "vim.mode == 'Normal' && editorTextFocus && !sideBarFocus && !terminalFocus",
+    "args": {
+      "commands": [
+        "workbench.action.toggleSidebarVisibility",
+        "mongoDBConnectionExplorer.focus"
+      ]
+    }
+  },
+  {
+    "key": "space m m",
+    "command": "workbench.action.toggleSidebarVisibility",
+    // "Space m m" chord to close MongoDB sidebar if it's focused
+    // Only triggers in normal mode, with the sidebar focused, no input focus, and not in terminal
+    "when": "vim.mode == 'Normal' && sideBarFocus && !inputFocus && !terminalFocus"
+  },
+  {
+    "key": "space m t",
+    "command": "mdb.disconnect",
+    "when": "vim.mode == 'Normal' && sideBarFocus && !inputFocus && !terminalFocus"
+    // Terminate the current MongoDB connection
+  },
+  // ====================================================================================================
+  // "SPACE C <...>" — CODE ACTIONS
+  // ====================================================================================================
+  {
+    "key": "space c d",
+    "command": "editor.action.dirtydiff.next",
+    "when": "vim.mode == 'Normal' && editorTextFocus && gitOpenRepositoryCount > 0 && !inReferenceSearchEditor"
+    // "Space c d" chord to jump to next diff
+  },
+  {
+    "key": "space c d",
+    "command": "closeQuickDiff",
+    "when": "vim.mode == 'Normal' && dirtyDiffVisible"
+    // "Space c d" chord to close quick diff
+  },
+  {
+    "key": "space c a",
+    "command": "editor.action.codeAction",
+    "when": "vim.mode == 'Normal' && editorTextFocus && !terminalFocus"
+    // "Space c a" chord for code actions
+  },
+  {
+    "key": "space c r",
+    "command": "editor.action.rename",
+    "when": "vim.mode == 'Normal' && editorTextFocus && !terminalFocus"
+    // "Space c r" chord to rename symbol
+  },
+  {
+    "key": "space c s",
+    "command": "workbench.action.gotoSymbol",
+    "when": "vim.mode == 'Normal' && editorTextFocus && !terminalFocus"
+    // "Space c s" chord to goto symbol
+  },
+  // ====================================================================================================
+  // EDITOR AND NAVIGATION
+  // ====================================================================================================
+  {
+    "key": "shift-tab",
+    "command": "workbench.action.previousEditorInGroup",
+    "when": "(vim.mode == 'Normal' || vim.mode == 'Visual') && (editorTextFocus || !inputFocus)"
+    // Shift+tab to go to previous editor in group
+  },
+  {
+    "key": "s h",
+    "command": "workbench.action.splitEditor",
+    "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus)"
+    // Splits editor horizontally
+  },
+  {
+    "key": "s v",
+    "command": "workbench.action.splitEditorDown",
+    "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus)"
+    // Splits editor vertically
+  },
+  {
+    "key": "ctrl-n",
+    "command": "editor.action.addSelectionToNextFindMatch",
+    "when": "(vim.mode == 'Normal' || vim.mode == 'Visual') && (editorTextFocus || !inputFocus)"
+    // Multiple cursor: add next find match
+  },
+  {
+    "key": "space o",
+    "command": "workbench.action.navigateForward",
+    "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus) && !terminalFocus"
+    // "Space o" chord to navigate forward
+  },
+  {
+    "key": "space i",
+    "command": "workbench.action.navigateBack",
+    "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus) && !terminalFocus"
+    // "Space i" chord to navigate backward
+  },
+  {
+    "key": "space w",
+    "command": "workbench.action.files.save",
+    "when": "vim.mode == 'Normal' && editorTextFocus && !terminalFocus"
+    // "Space w" chord to save file
+  },
+  {
+    "key": "shift-k",
+    "command": "editor.action.moveLinesUpAction",
+    "when": "vim.mode == 'VisualLine' && editorTextFocus"
+    // Moves lines up in VisualLine mode
+  },
+  {
+    "key": "shift-j",
+    "command": "editor.action.moveLinesDownAction",
+    "when": "vim.mode == 'VisualLine' && editorTextFocus"
+    // Moves lines down in VisualLine mode
+  },
+  {
+    "key": "shift-k",
+    "command": "editor.action.showHover",
+    "when": "vim.mode == 'Normal' && editorTextFocus"
+    // Shows hover documentation
+  },
+  // ====================================================================================================
+  // "SPACE G <...>" — GO TO
+  // ====================================================================================================
+  {
+    "key": "space g r",
+    "command": "editor.action.goToReferences",
+    "when": "vim.mode == 'Normal' && editorTextFocus && !terminalFocus"
+    // "Space g r" chord to go to references
+  },
+  {
+    "key": "space g i",
+    "command": "editor.action.goToImplementation",
+    "when": "vim.mode == 'Normal' && editorTextFocus && !terminalFocus"
+    // "Space g i" chord to go to implementation
+  },
+  {
+    "key": "space g t",
+    "command": "editor.action.revealDeclaration",
+    "when": "vim.mode == 'Normal' && editorTextFocus && !terminalFocus"
+    // "Space g t" chord to reveal declaration
+  },
+  {
+    "key": "space g d",
+    "command": "editor.action.revealDefinition",
+    "when": "vim.mode == 'Normal' && editorTextFocus && !terminalFocus"
+    // "Space g d" chord to reveal definition
+  },
+  {
+    "key": "space b d",
+    "command": "workbench.action.closeActiveEditor",
+    "when": "(vim.mode == 'Normal' && editorTextFocus) || !inputFocus"
+    // "Space b d" chord to close editor
+  },
+  {
+    "key": "space space",
+    "command": "workbench.action.quickOpen",
+    "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus) && !terminalFocus"
+    // "Space space" chord to open quickOpen
+  },
+  // ====================================================================================================
+  // "SPACE S <...>" — SEARCH
+  // ====================================================================================================
+  {
+    "key": "space s g",
+    "command": "workbench.action.findInFiles",
+    "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus) && !terminalFocus"
+    // "Space s g" chord to find in files
+  },
+  // ====================================================================================================
+  // "SPACE D <...>" — DEBUGGING
+  // ====================================================================================================
+  {
+    "key": "space d a",
+    "command": "workbench.action.debug.selectandstart",
+    "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus) && debuggersAvailable && !terminalFocus"
+    // "Space d a" chord to start debug session
+  },
+  {
+    "key": "space d t",
+    "command": "workbench.action.debug.stop",
+    "when": "vim.mode == 'Normal' && editorTextFocus && inDebugMode && !focusedSessionIsAttached && !terminalFocus"
+    // "Space d t" chord to stop debugging
+  },
+  {
+    "key": "space d s",
+    "command": "workbench.action.debug.stepOver",
+    "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus) && inDebugMode && debugState == 'stopped' && !terminalFocus"
+    // "Space d s" chord to step over
+  },
+  {
+    "key": "space d i",
+    "command": "workbench.action.debug.stepInto",
+    "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus) && inDebugMode && debugState == 'stopped' && !terminalFocus"
+    // "Space d i" chord to step into
+  },
+  {
+    "key": "space d o",
+    "command": "workbench.action.debug.stepOut",
+    "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus) && inDebugMode && debugState == 'stopped' && !terminalFocus"
+    // "Space d o" chord to step out
+  },
+  {
+    "key": "space d b",
+    "command": "editor.debug.action.toggleBreakpoint",
+    "when": "vim.mode == 'Normal' && editorTextFocus && !terminalFocus"
+    // "Space d b" chord to toggle breakpoint
+  },
+  {
+    "key": "space d e",
+    "command": "editor.debug.action.showDebugHover",
+    "when": "vim.mode == 'Normal' && editorTextFocus && inDebugMode && debugState == 'stopped' && !terminalFocus"
+    // "Space d e" chord for debug hover
+  },
+  {
+    "key": "space d c",
+    "command": "workbench.action.debug.continue",
+    "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus) && inDebugMode && debugState == 'stopped' && !terminalFocus"
+    // "Space d c" chord to continue debug
+  },
+  {
+    "key": "space d j",
+    "command": "extension.js-debug.createDebuggerTerminal",
+    "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus) && !terminalFocus"
+    // "Space d j" chord to create a new debug terminal
+  },
+  {
+    "key": "alt+cmd+h",
+    "command": "-rest-client.history"
+  }
 ]
