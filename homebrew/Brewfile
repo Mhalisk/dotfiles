@@ -51,6 +51,8 @@ brew "eza"
 brew "zoxide"
 # Simple terminal UI for git commands
 brew "lazygit"
+# Simple terminal UI for docker commands
+brew "lazydocker"
 # NeoVim
 brew "neovim"
 # Application uninstaller
