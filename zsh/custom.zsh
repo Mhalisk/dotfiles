@@ -9,6 +9,7 @@ eval "$(pyenv init -)" # Initialize pyenv when a new shell spawns
 
 # OH-MY-ZSH
 export ZSH="$HOME/.oh-my-zsh"
+source $ZSH/oh-my-zsh.sh
 
 # Starship
 export STARSHIP_CONFIG="$HOME/.config/starship/starship.toml"
