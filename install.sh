@@ -2,6 +2,7 @@
 
 . scripts/utils.sh
 . scripts/prerequisites.sh
+. scripts/install-oh-my-zsh.sh
 . scripts/brew-install-custom.sh
 . scripts/osx-defaults.sh
 . scripts/symlinks.sh

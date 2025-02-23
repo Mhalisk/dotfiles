@@ -7,6 +7,9 @@ export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)" # Initialize pyenv when a new shell spawns
 
+# OH-MY-ZSH
+export ZSH="$HOME/.oh-my-zsh"
+
 # Starship
 export STARSHIP_CONFIG="$HOME/.config/starship/starship.toml"
 eval "$(starship init zsh)"
