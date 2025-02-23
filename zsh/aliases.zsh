@@ -55,6 +55,10 @@ alias ls="eza --all --icons=always"
 # Lazygit
 alias lg="lazygit"
 
+# Lazydocker
+alias ld="lazydocker"
+alias l='ls -lah'
+
 # Function to commit with ticket ID from current branch, with optional push
 quick_commit() {
   local branch_name ticket_id commit_message push_flag
