@@ -9,6 +9,7 @@ eval "$(pyenv init -)" # Initialize pyenv when a new shell spawns
 
 # OH-MY-ZSH
 export ZSH="$HOME/.oh-my-zsh"
+plugins=(git gcloud z)
 source $ZSH/oh-my-zsh.sh
 
 # Starship
