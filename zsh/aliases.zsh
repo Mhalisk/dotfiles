@@ -59,6 +59,12 @@ alias lg="lazygit"
 alias ld="lazydocker"
 alias l='ls -lah'
 
+# Configure Aliases
+alias aliasconfig="cd ~/.config/zsh && nvim ./aliases.zsh"
+
+# Configure zshrc
+alias zshconfig="cd ~./.config/zsh && nvim ./custom.zsh"
+
 # Function to commit with ticket ID from current branch, with optional push
 quick_commit() {
   local branch_name ticket_id commit_message push_flag
