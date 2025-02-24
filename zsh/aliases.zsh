@@ -63,7 +63,10 @@ alias l='ls -lah'
 alias aliasconfig="cd ~/.config/zsh && nvim ./aliases.zsh"
 
 # Configure zshrc
-alias zshconfig="cd ~./.config/zsh && nvim ./custom.zsh"
+alias zshconfig="cd ~/.config/zsh && nvim ./custom.zsh"
+
+# Configure dotfiles
+alias dotfiles="cd ~/dev/github.com/dotfiles && nvim ."
 
 # Function to commit with ticket ID from current branch, with optional push
 quick_commit() {
