@@ -4,12 +4,13 @@
 [ -f "$HOME/.env" ] && source "$HOME/.env"
 
 # Themes (onedark or nord)
-# export TMUX_THEME="nord"
-# export NVIM_THEME="nord"
+export TMUX_THEME="nord"
+export NVIM_THEME="nord"
 # export STARSHIP_THEME="nord"
 # export WEZTERM_THEME="nord"
 
 # Locale settings
+#
 export LANG="en_US.UTF-8" # Sets default locale for all categories
 export LC_ALL="en_US.UTF-8" # Overrides all other locale settings
 export LC_CTYPE="en_US.UTF-8" # Controls character classification and case conversion
