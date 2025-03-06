@@ -1,0 +1,362 @@
+[
+  // ====================================================================================================
+  // ================================== REMOVE ANNOYING SETTINGS ========================================
+  // ====================================================================================================
+  {
+    "key": "shift+cmd+c",
+    "command": "-workbench.action.terminal.openNativeConsole",
+    "when": "!terminalFocus"
+    // Removes default open native console
+  },
+  // ====================================================================================================
+  // ===================================== USER INTERFACE - UI ==========================================
+  // =============================================================================================3======
+  {
+    "key": "cmd+m",
+    "command": "workbench.action.toggleMaximizedPanel",
+    "when": "panelFocus"
+    // Toggles maximized panel
+  },
+  {
+    "key": "shift+cmd+;",
+    "command": "workbench.action.terminal.resizePaneDown",
+    "when": "panelFocus"
+    // Resizes pane down while panel is focused
+  },
+  {
+    "key": "shift+cmd+'",
+    "command": "workbench.action.terminal.resizePaneUp",
+    "when": "panelFocus"
+    // Resizes pane up while panel is focused
+  },
+  // ====================================================================================================
+  // ===================================== CODE NAVIGATION ==============================================
+  // ====================================================================================================
+  {
+    "key": "cmd+]",
+    "command": "workbench.action.navigateForward"
+    // Navigates forward
+  },
+  {
+    "key": "cmd+o",
+    "command": "workbench.action.navigateForward"
+    // Navigates forward
+  },
+  {
+    "key": "ctrl+shift+-",
+    "command": "-workbench.action.navigateForward"
+    // Removes another forward nav binding
+  },
+  {
+    "key": "cmd+[",
+    "command": "workbench.action.navigateBack"
+    // Navigates back
+  },
+  {
+    "key": "cmd+i",
+    "command": "workbench.action.navigateBack"
+    // Navigates back
+  },
+  {
+    "key": "ctrl+-",
+    "command": "-workbench.action.navigateBack"
+    // Removes another back nav binding
+  },
+  {
+    "key": "cmd+enter",
+    "command": "editor.action.revealDefinition"
+    // Reveal definition
+  },
+  // ====================================================================================================
+  // =================================== WINDOW, TAB MANAGEMENT & NAVIGATION ============================
+  // ====================================================================================================
+  {
+    "key": "shift+alt+]",
+    "command": "workbench.action.showNextWindowTab"
+    // Shows next window tab
+  },
+  {
+    "key": "shift+alt+[",
+    "command": "workbench.action.showPreviousWindowTab"
+    // Shows previous window tab
+  },
+  {
+    "key": "ctrl-h",
+    "command": "workbench.action.navigateLeft"
+    // Focuses the left editor group
+  },
+  {
+    "key": "ctrl-l",
+    "command": "workbench.action.navigateRight"
+    // Focuses the right editor group
+  },
+  {
+    "key": "ctrl-k",
+    "command": "workbench.action.navigateUp"
+    // Focuses the up editor group
+  },
+  {
+    "key": "ctrl-j",
+    "command": "workbench.action.navigateDown"
+    // Focuses the down editor group
+  },
+  {
+    "key": "ctrl+1",
+    "command": "workbench.action.focusFirstEditorGroup"
+    // Focuses the first editor group
+  },
+  {
+    "key": "ctrl+shift+]",
+    "command": "workbench.action.focusNextGroup"
+    // Focuses the next editor group
+  },
+  {
+    "key": "ctrl+shift+[",
+    "command": "workbench.action.focusPreviousGroup"
+    // Focuses the previous editor group
+  },
+  {
+    "key": "ctrl+2",
+    "command": "workbench.action.focusSecondEditorGroup"
+    // Focuses the second editor group
+  },
+  {
+    "key": "ctrl+3",
+    "command": "workbench.action.focusThirdEditorGroup"
+    // Focuses the third editor group
+  },
+  {
+    "key": "ctrl+4",
+    "command": "workbench.action.focusFourthEditorGroup"
+    // Focuses the fourth editor group
+  },
+  {
+    "key": "ctrl+5",
+    "command": "workbench.action.focusFifthEditorGroup"
+    // Focuses the fifth editor group
+  },
+  {
+    "key": "ctrl+6",
+    "command": "workbench.action.focusSixthEditorGroup"
+    // Focuses the sixth editor group
+  },
+  {
+    "key": "ctrl+7",
+    "command": "workbench.action.focusSeventhEditorGroup"
+    // Focuses the seventh editor group
+  },
+  {
+    "key": "ctrl+8",
+    "command": "workbench.action.focusEighthEditorGroup"
+    // Focuses the eighth editor group
+  },
+  {
+    "key": "cmd+1",
+    "command": "workbench.action.openEditorAtIndex1"
+    // Opens the editor at index 1
+  },
+  {
+    "key": "cmd+2",
+    "command": "workbench.action.openEditorAtIndex2"
+    // Opens the editor at index 2
+  },
+  {
+    "key": "cmd+3",
+    "command": "workbench.action.openEditorAtIndex3"
+    // Opens the editor at index 3
+  },
+  {
+    "key": "cmd+4",
+    "command": "workbench.action.openEditorAtIndex4"
+    // Opens the editor at index 4
+  },
+  {
+    "key": "cmd+5",
+    "command": "workbench.action.openEditorAtIndex5"
+    // Opens the editor at index 5
+  },
+  {
+    "key": "cmd+6",
+    "command": "workbench.action.openEditorAtIndex6"
+    // Opens the editor at index 6
+  },
+  {
+    "key": "cmd+7",
+    "command": "workbench.action.openEditorAtIndex7"
+    // Opens the editor at index 7
+  },
+  {
+    "key": "cmd+8",
+    "command": "workbench.action.openEditorAtIndex8"
+    // Opens the editor at index 8
+  },
+  {
+    "key": "cmd+9",
+    "command": "workbench.action.openEditorAtIndex9"
+    // Opens the editor at index 9
+  },
+  // ====================================================================================================
+  // =========================================== TERMINAL ===============================================
+  // ====================================================================================================
+  {
+    "key": "shift+cmd+j j",
+    "command": "workbench.action.terminal.toggleTerminal"
+    // "when": "terminal.active"
+    // Toggles the terminal
+  },
+  {
+    "key": "shift+cmd+j n",
+    "command": "workbench.action.terminal.new",
+    "when": "terminalProcessSupported || terminalWebExtensionContributedProfile"
+    // Creates a new terminal
+  },
+  {
+    "key": "shift+cmd+j p",
+    "command": "workbench.actions.view.problems",
+    "when": "workbench.panel.markers.view.active"
+    // Shows the Problems panel
+  },
+  {
+    "key": "shift+cmd+j o",
+    "command": "workbench.action.output.toggleOutput"
+    // Toggles the Output panel
+  },
+  {
+    "key": "shift+cmd+j d",
+    "command": "workbench.debug.action.toggleRepl",
+    "when": "workbench.panel.repl.view.active"
+    // Toggles the Debug Console
+  },
+  {
+    "key": "cmd+j",
+    "command": "workbench.action.terminal.toggleTerminal",
+    "when": "terminal.active"
+    // Toggles the terminal
+  },
+  {
+    "key": "ctrl+`",
+    "command": "-workbench.action.terminal.toggleTerminal",
+    "when": "terminal.active"
+    // Removes default terminal toggle
+  },
+  {
+    "key": "shift+cmd+backspace",
+    "command": "workbench.action.terminal.kill",
+    "when": "terminalFocus"
+    // Kills the terminal
+  },
+  {
+    "key": "shift+cmd+j backspace",
+    "command": "workbench.action.terminal.kill",
+    "when": "terminalFocus"
+    // Kills the terminal
+  },
+  {
+    "key": "shift+cmd+l",
+    "command": "workbench.action.terminal.focusNext",
+    "when": "terminalFocus"
+    // Focuses the next terminal tab
+  },
+  {
+    "key": "shift+cmd+h",
+    "command": "-workbench.action.terminal.focusNext",
+    "when": "terminalFocus"
+    // Removes default next terminal focus
+  },
+  {
+    "key": "shift+cmd+m",
+    "command": "-workbench.actions.view.problems",
+    "when": "workbench.panel.markers.view.active"
+    // Removes default problems panel key
+  },
+  {
+    "key": "shift+cmd+u",
+    "command": "-workbench.action.output.toggleOutput",
+    "when": "workbench.panel.output.active"
+    // Removes default output toggle
+  },
+  {
+    "key": "shift+cmd+g",
+    "command": "workbench.scm.focus"
+    // Focuses the Source Control (SCM) panel
+  },
+  {
+    "key": "shift+cmd+m",
+    "command": "dockerContainers.focus"
+    // Focuses docker containers view
+  },
+  {
+    "key": "shift+cmd+b",
+    "command": "workbench.view.extension.bookmarks"
+    // Opens the Bookmarks view
+  },
+  {
+    "key": "alt+cmd+h",
+    "command": "bookmarks.jumpToPrevious"
+    // Jumps back to previous Bookmark
+  },
+  {
+    "key": "cmd+k",
+    "command": "workbench.action.terminal.sendSequence",
+    "args": { "text": "clear\n" },
+    "when": "terminalFocus"
+    // Override clear terminal keybinding to keep powerlevel10k statusbar
+  },
+  // ====================================================================================================
+  // ================================ FILE EXPLORER - CRUD SHORTCUTS  ===================================
+  // ====================================================================================================
+  {
+    "key": "r",
+    "command": "renameFile",
+    "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+    // Renames the selected file in the Explorer
+  },
+  {
+    "key": "c",
+    "command": "filesExplorer.copy",
+    "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+    // Copies the selected file in the Explorer
+  },
+  {
+    "key": "p",
+    "command": "filesExplorer.paste",
+    "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+    // Pastes a previously copied or cut file in the Explorer
+  },
+  {
+    "key": "x",
+    "command": "filesExplorer.cut",
+    "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+    // Cuts (moves) the selected file in the Explorer
+  },
+  {
+    "key": "d",
+    "command": "deleteFile",
+    "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+    // Deletes the selected file in the Explorer
+  },
+  {
+    "key": "a",
+    "command": "explorer.newFile",
+    "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+    // Creates a new file in the Explorer
+  },
+  {
+    "key": "s",
+    "command": "explorer.openToSide",
+    "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+    // Opens the selected file in a split editor to the side
+  },
+  {
+    "key": "enter",
+    "command": "explorer.openAndPassFocus",
+    "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceIsFolder && !inputFocus"
+    // Opens the selected file and passes focus to the editor
+  },
+  {
+    "key": "enter",
+    "command": "list.toggleExpand",
+    "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && explorerResourceIsFolder && !inputFocus"
+    // Toggles the expansion (collapse/expand) of a folder in the Explorer
+  }
+]

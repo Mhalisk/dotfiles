@@ -1,0 +1,112 @@
+tap "homebrew/bundle"
+tap "homebrew/cask"
+tap "homebrew/core"
+# Library for command-line editing
+brew "readline"
+# Official Amazon AWS command-line interface
+brew "awscli"
+# Cross-platform make
+brew "cmake"
+# Command-line fuzzy finder written in Go
+brew "fzf"
+# GNU compiler collection
+brew "gcc"
+# Fast, highly customisable system info script
+brew "neofetch"
+# Platform built on V8 to build network applications
+brew "node"
+# Python version management
+brew "pyenv"
+# File browser
+brew "ranger"
+# Search tool like grep and The Silver Searcher
+brew "ripgrep"
+# Powerful, clean, object-oriented scripting language
+brew "ruby"
+# Terminal multiplexer
+brew "tmux"
+# Plugin manager for tmux
+brew "tpm"
+# Access X11 clipboards from the command-line
+brew "xclip"
+# General-purpose lossless data-compression library
+brew "zlib"
+# Fish-like fast/unobtrusive autosuggestions for zsh
+brew "zsh-autosuggestions"
+# Fish shell like syntax highlighting for zsh
+brew "zsh-syntax-highlighting"
+# Cross-shell prompt for astronauts
+brew "starship"
+# Cryptography and SSL/TLS Toolkit
+brew "openssl@3", link: false
+# Object-relational database system
+brew "postgresql@14"
+# Command-line interface for SQLite
+brew "sqlite"
+# PDF rendering library (based on the xpdf-3.0 code base)
+brew "poppler"
+# Modern, maintained replacement for ls
+brew "eza"
+# A better cd command
+brew "zoxide"
+# Simple terminal UI for git commands
+brew "lazygit"
+# Simple terminal UI for docker commands
+brew "lazydocker"
+# NeoVim
+brew "neovim"
+# Application uninstaller
+cask "appcleaner"
+# Universal database tool and SQL client
+cask "dbeaver-community"
+# App to build and share containerized applications and microservices
+cask "docker"
+# Developer targeted font
+cask "font-fira-code-nerd-font"
+# Terminal emulator as alternative to Apple's Terminal app
+cask "iterm2"
+# GPU-based terminal emulator
+cask "kitty"
+# GPU-accelerated cross-platform terminal emulator and multiplexer
+cask "wezterm"
+# Knowledge base that works on top of a local folder of plain text Markdown files
+cask "obsidian"
+# Keyboard customizer
+cask "karabiner-elements"
+# Open-source code editor
+cask "visual-studio-code"
+# Multimedia player
+cask "vlc"
+# App that enables mouse-free UI interaction
+cask "shortcat"
+# Software for Logitech devices
+cask "logi-options-plus"
+# VS Code Extentions
+vscode "better-ts-errors.better-ts-errors"
+vscode "esbenp.prettier-vscode"
+vscode "alefragnani.Bookmarks"
+vscode "openai.openai-chatgpt-adhoc"
+vscode "streetsidesoftware.code-spell-checker"
+vscode "adpyke.codesnap"
+vscode "naumovs.color-highlight"
+vscode "ms-azuretools.vscode-docker"
+vscode "mikestead.dotenv"
+vscode "dbaeumer.vscode-eslint"
+vscode "GitHub.copilot"
+vscode "GitHub.copilot-chat"
+vscode "eamodio.gitlens"
+vscode "hashicorp.terraform"
+vscode "yzane.markdown-pdf"
+vscode "PKief.material-icon-theme"
+vscode "Postman.postman-for-vscode"
+vscode "alefragnani.project-manager"
+vscode "artdiniz.quitcontrol-vscode"
+vscode "WallabyJs.quokka-vscode"
+vscode "humao.rest-client"
+vscode "rubocop.vscode-rubocop"
+vscode "castwide.solargraph"
+vscode "vscodevim.vim"
+vscode "matt-meyers.vscode-dbml"
+vscode "redhat.vscode-yaml"
+vscode "usernamehw.errorlens"
+
