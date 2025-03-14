@@ -195,6 +195,16 @@
     "command": "workbench.action.openEditorAtIndex9"
     // Opens the editor at index 9
   },
+  {
+    "key": "ctrl+cmd+down",
+    "command": "workbench.action.moveEditorToBelowGroup"
+    // Moves editor to the group below
+  },
+  {
+    "key": "ctrl+cmd+up",
+    "command": "workbench.action.moveEditorToAboveGroup"
+    // Moves editor to the group above
+  },
   // ====================================================================================================
   // =========================================== TERMINAL ===============================================
   // ====================================================================================================

@@ -188,7 +188,7 @@
     // runs the extension in separate process for better performance
     "vscodevim.vim": 1
   },
-  "vim.useSystemClipboard": true,
+  "vim.useSystemClipboard": false,
   "vim.showMarksInGutter": false,
   "vim.foldfix": true,
   "vim.surround": true,
